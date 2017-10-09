@@ -29,5 +29,6 @@ class IntervalsController < ApplicationController
 					max =result
 				end
 			end
-		end	
+		end
+	end	
 end
