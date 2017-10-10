@@ -9,8 +9,10 @@ class IntervalsController < ApplicationController
 		count_rows = 0
 		CSV.foreach(file_path) do |row|
 			count_rows += 1
+			render plain: $
 		end
-		for i in 0..(count_rows - 30)
+		=begin
+		for i in 0...(count_rows - 30)
 			check = i
 			CSV.foreach(file_path) do |row|	
 				if $LINE_NUMBER > check 
@@ -30,5 +32,8 @@ class IntervalsController < ApplicationController
 				end
 			end
 		end
+		=end
+		result = result.ceil
+		render plain: "%.2f"%result
 	end	
 end
