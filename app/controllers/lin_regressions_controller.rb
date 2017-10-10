@@ -13,7 +13,7 @@ class LinRegressionsController < ApplicationController
 			y[i] = row[0].to_f
 			count += 1 		
 		end
-		result = Regression::Linear.new xs, ys
+		result = Regression::Linear.new x, y
 		render plain: "%.6f,%.6f"% [result.slope, result.intercept] 
 	end
 end
