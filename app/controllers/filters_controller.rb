@@ -4,13 +4,13 @@ class FiltersController < ApplicationController
 	def create
 		file = params[:file]
                 file_path = file.path
-                sum = 0
+                result = 0
                 CSV.foreach(file_path) do |row|
 			if row[2].to_f%2 != 0
-				sum += row[1].to_f
+				result += row[1].to_f
 			end
                 end
-                sum = sum.ceil
-                render plain: "%.2f"%sum		
+                result = result.ceil
+                render plain: "%.2f"%result		
 	end
 end
