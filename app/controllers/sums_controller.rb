@@ -15,3 +15,4 @@ class SumsController < ApplicationController
 		render plain: "%.2f"%result 
 	end
 end
+
