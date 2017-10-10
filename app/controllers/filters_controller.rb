@@ -1,3 +1,4 @@
+
 require 'csv'
 class FiltersController < ApplicationController
 	protect_from_forgery except: :create

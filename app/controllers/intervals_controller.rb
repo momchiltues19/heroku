@@ -13,7 +13,7 @@ class IntervalsController < ApplicationController
 		until (check+30)==num_of_rows
 			result = 0
                		CSV.foreach(file_path).with_index(0) do |row,which_row|
-				if check+29 == which_row
+				if check+30-1 == which_row
 					break
 				end
 				result += row[0].to_f

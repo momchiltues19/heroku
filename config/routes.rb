@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-	get 'sums' => 'sums#index'
 	post 'sums' => 'sums#create'
 	post 'filters' => 'filters#create'  
 	post 'intervals' => 'intervals#create'
