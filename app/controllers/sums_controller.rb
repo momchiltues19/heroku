@@ -5,11 +5,10 @@ class SumsController < ApplicationController
 		file = params[:file]
 		file_path = file.path
 		result = 0
-		CSV.foreach(file_path) do |row|
+		CSV.foreach(file_path,headers: true) do |row|
 			result += row[0].to_f
 		end
 		result = result.ceil
 		render plain: "%.2f"%result 
 	end
 end
-
