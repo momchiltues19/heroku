@@ -14,7 +14,7 @@ class IntervalsController < ApplicationController
 		end
 		until (num+30) > num_of_rows
 			result = 0
-               		CSV.foreach(file_path,headers: true).with_index(0) do |row,which_row|
+               		CSV.foreach(file_path).with_index(0) do |row,which_row|
 				arr[which_row] = row[0].to_f
 			end
 			arr.drop(num).each.with_index(0) do |a,num_row|
