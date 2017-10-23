@@ -5,7 +5,7 @@ class FiltersController < ApplicationController
 		file = params[:file]
                 file_path = file.path
                 result = 0
-                CSV.foreach(file_path,headers: true) do |row|
+                CSV.foreach(file_path) do |row|
 			if row[2].to_f%2 != 0
 				result += row[1].to_f
 			end
