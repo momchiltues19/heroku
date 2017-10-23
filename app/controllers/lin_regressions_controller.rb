@@ -9,7 +9,7 @@ class LinRegressionsController < ApplicationController
 		ys = []
 		result = 0
 		i = 0
-		CSV.foreach(file_path,headers: true).with_index(1) do |row,which_row|
+		CSV.foreach(file_path).with_index(1) do |row,which_row|
 			xs[i] = which_row
 			ys[i] = row[0].to_f
 			i += 1 		
